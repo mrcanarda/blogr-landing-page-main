@@ -1,0 +1,118 @@
+/**************************/
+/* BELOW 544px (Phones) */
+/**************************/
+
+@media (max-width: 34em) {
+    .grid {
+      row-gap: 4.8rem;
+    }
+
+    .grid--2-cols, 
+    .grid--3-cols,
+    .grid--4-cols {
+        grid-template-columns: 1fr;
+    }
+
+
+          /* MOBILE NAVIGATION */
+
+          .btn-mobile-nav {
+            display: block;
+              z-index: 9999;
+            }
+
+        .main-nav {
+         background-color: #fff;
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(10px);
+        position: absolute;
+        top: 30%;
+        left: 10%;
+        font-family: 'Fraunces', serif;
+        font-weight: 700;
+        font-weight: 900;
+       
+        width: 100%;
+        width: 58rem;
+        height: 100vh;
+        height: 48rem;
+        transform: translateX(100%);
+
+        display: flex;
+        
+        align-items: center;
+        justify-content: center;
+        transition: all 0.5s ease-in;
+
+            /* Hide navigation */
+            /* Allows NO transitions at all */
+            /* display: none; */
+
+         /* 1) Hide it visually */
+                opacity: 0;
+
+            /* 2) Make it unaccessible to mouse and keyboard */
+            pointer-events: none;
+
+            /* 3) Hide it from screen readers */
+         visibility: hidden;
+            }
+
+     
+
+         .nav-open .main-nav {
+         opacity: 1;
+            pointer-events: auto;
+         visibility: visible;
+         transform: translateX(0);
+         }
+
+         .nav-open .icon-mobile-nav[name="close-outline"] {
+          display: block;
+         }
+
+         .nav-open .icon-mobile-nav[name="menu-outline"] {
+          display: none;
+         }
+
+         .main-nav-list {
+         flex-direction: column;
+            }
+
+          .header {
+                display: flex;
+                justify-self: center;
+                align-items: center;
+                /* Because we want header to be sticky later */
+                padding: .2rem 1rem;
+              }
+
+              .btn-mobile-nav {
+                padding-left: 10rem;
+                padding-bottom: 4rem;
+              }
+
+              .hero-zwei h1 {
+                font-size: 3rem;
+                letter-spacing: .1px;
+                width: 40%;
+                text-align: center;
+                color: #fff;
+                font-family: 'Overpass', sans-serif;
+              }
+
+              .hero-zwei h3 {
+                font-size: 3rem;
+                font-weight: 300;
+                width: 70%;
+                text-align: center;
+                font-family: 'Overpass', sans-serif;
+                color: #fff;
+                margin-top: 1.2rem;
+              } 
+
+              .hero {
+                width: 70rem;
+              }
+
+}
